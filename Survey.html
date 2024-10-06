@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey - Water Monitoring Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header with Navigation Menu -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Water Monitoring</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Feedback</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Survey Form Section -->
+<section class="survey-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Water Body Survey</h2>
+    <p class="text-center">Please fill out the survey below to help us monitor water bodies more effectively.</p>
+    <form id="survey-form" class="mx-auto" style="max-width: 600px;">
+      <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="mb-3">
+        <label for="waterBodyType" class="form-label">Type of Water Body</label>
+        <select class="form-select" id="waterBodyType" required>
+          <option selected disabled>Select type</option>
+          <option value="lake">Lake</option>
+          <option value="river">River</option>
+          <option value="ocean">Ocean</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Is the water quality satisfactory?</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="waterQuality" id="qualityYes" value="yes" required>
+          <label class="form-check-label" for="qualityYes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="waterQuality" id="qualityNo" value="no">
+          <label class="form-check-label" for="qualityNo">No</label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="comments" class="form-label">Additional Comments</label>
+        <textarea class="form-control" id="comments" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Survey</button>
+    </form>
+    <div id="form-result" class="mt-3 text-center"></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-light text-center py-4">
+  <div class="container">
+    <p>Contact us: <a href="mailto:info@watermonitoring.com">info@watermonitoring.com</a></p>
+    <p>Follow us:
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a>
+    </p>
+    <p>&copy; 2024 Water Monitoring Project. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
